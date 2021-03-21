@@ -89,6 +89,33 @@ Dica: Copie e cole o conteúdo do arquivo acima no [Swagger Editor](https://edit
 
 ## Seção reservada para que você descreva brevemente como executar o seu projeto
 
-Pode ser algo simples, como executar o arquivo Application.java. Ou talvez tenha alguma dependência como base de dados, por exemplo.
+## POSTMAN
 
-TODO
+### localhost:9000/beers - Método GET, retorna todas as cervejas cadastradas no banco.
+
+### localhost:9000/beers - Método POST, cadastra uma cerveja e armazena no banco (precisa de um body Beer).
+
+*Body de exemplo.
+```JSON
+{
+    "id":"6",
+    "name":"Polar",
+    "alcoholContent": "5% vol",
+    "price": "5",
+    "category": "Pilsen"
+}
+```
+
+### localhost:9000/beers/?id=1 - Método PUT, Atualiza a cerveja (Requer um parametro ID e um body Beer).
+
+*Body de exemplo.
+```JSON
+{
+    "id":"6",
+    "name":"Polar",
+    "alcoholContent": "5% vol",
+    "price": "10",
+    "category": "Pilsen"
+}
+```
+### localhost:9000/beers/?id=6 - Método DELETE, Exclui uma cerveja cadastrada pelo id informado (Requer o parametro ID).
